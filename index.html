@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+            <div class="task-input">
+                <input type="text" id="task-title" placeholder="Add a new task" maxlength="50">
+                <input type="date" id="task-due-date">
+                <select id="task-priority">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <select id="task-category">
+                    <option value="">No Category</option>
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="urgent">Urgent</option>
+                </select>
+                <button id="add-task">Add Task</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-tasks" placeholder="Search tasks...">
+                <div class="sort-buttons">
+                    <button id="sort-priority">Sort by Priority</button>
+                    <button id="sort-due-date">Sort by Due Date</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="task-section">
+                <h2>Tasks</h2>
+                <div class="task-list" id="task-list"></div>
+            </div>
+            <div class="task-section">
+                <h2>Completed</h2>
+                <div class="completed-list" id="completed-list"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
